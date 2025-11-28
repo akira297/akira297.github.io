@@ -1,0 +1,67 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    font-weight: bold;
+    color: #222;
+}
+
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+    /* Ссылки */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #0056b3;
+    }
+
+/* Стили для изображений */
+img {
+    width: 50%; 
+    height: auto; /* Высота изображения подстраивается под ширину */
+}
+
+/* Стили для таблиц */
+table {
+    width: auto;
+    border-collapse: collapse; /* Объединяем границы ячеек */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+th, td {
+    padding: 8px; /* Внутренние отступы ячеек */
+    border: 1px solid #ddd; /* Граница ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+th {
+    background-color: #f2f2f2; /* Фон заголовков таблицы */
+}
+
+/* Стили для футера */
+
+footer {
+    background-color: black; 
+    color: white; 
+    padding: 10px; 
+ 
+}
+
+
+}
