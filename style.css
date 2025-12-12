@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     font-size: 18px;
@@ -8,10 +8,25 @@
 
 /* Заголовки */
 h1, h2, h3 {
-    font-weight: bold;
-    color: #222;
+    margin-bottom: 50px;
+    color: #333;
 }
 
+.container {
+    max-width: 1200px; /* Максимальная ширина контента */
+    margin: 0 auto; /* Автоматические отступы слева/справа для центрирования */
+    padding: 0 20px; 
+}
+
+.form-container {
+    margin: 0 auto;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px; /*закругление углов*/
+    border: 3px solid #333;
+    margin-bottom: 10px;
+    background: url('photo/auth.jpg');
+}
 
 nav {
     background-color: #333;
@@ -20,21 +35,25 @@ nav {
     margin-bottom: 10px;
 }
 
-
     /* Ссылки */
 a {
     color: white;
     text-decoration: none;
 }
 
-    a:hover {
-        color: #0056b3;
-    }
+a:hover {
+    color: #0056b3;
+}
 
 /* Стили для изображений */
 img {
-    width: 50%; 
+    display: block; /* Делаем блочным элементом для центрирования */
+    width: 70%; /* Увеличиваем с 50% до 70% */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
     height: auto; /* Высота изображения подстраивается под ширину */
+    margin: 20px auto; /* Центрируем по горизонтали и добавляем отступы сверху/снизу */
+    border-radius: 8px; /* Добавляем скругленные углы для красоты */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Добавляем тень для объема */
 }
 
 /* Стили для таблиц */
@@ -57,11 +76,7 @@ th {
 /* Стили для футера */
 
 footer {
-    background-color: black; 
-    color: white; 
-    padding: 10px; 
- 
-}
-
-
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
