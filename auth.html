@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food Construct - Авторизация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Контейнер для центрирования всего контента -->
+    <div class="container">
+
+        <!-- Шапка -->
+        <header>
+            <h1>Food Construct</h1>
+            <nav>
+                <a href="index.html">О нас</a>
+                <a href="#">Меню</a>
+                <a href="#">Заказ</a>
+                <a href="#contacts">Контакты</a>
+                <a href="feedback.html">Обратная связь</a>
+                <a href="auth.html">Авторизация</a>
+            </nav>
+        </header>
+
+        <!-- Основное содержимое с формой авторизации -->
+        <main>
+
+            <h2>Авторизация</h2>
+
+            <div class="form-container">
+
+                <form action="https://httpbin.org/post"
+                      method="POST">
+
+                    <label for="username">Логин:</label>
+                    <input type="text" id="username" name="username"
+                           placeholder="Введите логин" required><br />
+
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password"
+                           name="password"
+                           placeholder="Введите пароль" required><br />
+
+                    <input type="checkbox" id="remember_me"
+                           name="remember">
+                    <label for="remember_me">Запомнить данные авторицазиции</label><br />
+
+
+                    <button type="submit">Войти</button>
+
+                </form>
+            </div>
+        </main>
+
+        <!-- Футер с контактными данными -->
+        <footer id="contacts">
+            Адрес: Москва | Телефон: +1 (234) 567-89-10 | Email: Food@Construct.com
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
