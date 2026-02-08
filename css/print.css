@@ -1,0 +1,74 @@
+@media print {
+
+    button,
+    .dish-card button,
+    #delivery,
+    #contacts,
+    #feedback-form .submit-btn,
+    .menu-section,
+    .table-container a, 
+    #about  {
+        display: none !important;
+    }
+
+
+    body {
+        font-family: 'Times New Roman', serif;
+        font-size: 12pt;
+        color: #000;
+        background-color: #fff;
+    }
+
+    main {
+        padding: 0;
+        margin: 1cm; 
+        max-width: 100%;
+        box-shadow: none;
+    }
+    
+    section {
+      page-break-inside: avoid; 
+    }
+
+    h2 {
+        color: #000 !important;
+        text-align: left;
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .dishes-grid {
+        display: block; 
+    }
+
+    .dish-card {
+        display: block;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        padding: 10px;
+        filter: none;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+    
+
+    table, tr, td, th {
+        border: 1px solid #000 ;
+        color: #000 ;
+        background-color: #fff ;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+     a[href^="tel:"]:after, a[href^="mailto:"]:after {
+        content: "";
+    }
+}

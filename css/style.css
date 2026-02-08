@@ -1,0 +1,255 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+/* Стили из второго кода */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Навигация из второго кода */
+nav {
+    background-color: #333;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Ссылки из второго кода */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #0056b3; /* Цвет для наведения на ссылки */
+    }
+
+/* Стили для изображений из второго кода */
+img {
+    display: block;
+    width: 70%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Стили для таблиц из второго кода */
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Футер из второго кода */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Контейнер формы из второго кода */
+.form-container {
+    margin: 0 auto;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid #333;
+    margin-bottom: 10px;
+    background: url('photo/auth.jpg');
+}
+
+/* Стили из первого кода с адаптированными цветами */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dish-card {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: border 0.3s ease, transform 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+    /* ИЗМЕНЕНО: цвет при наведении на #0056b3 (как у ссылок) */
+    .dish-card:hover {
+        border: 2px solid #0056b3; /* Заменен tomato на #0056b3 */
+        transform: translateY(-5px);
+    }
+
+        /* ИЗМЕНЕНО: цвет кнопки при наведении на блок */
+        .dish-card:hover .add-to-cart-btn {
+            background-color: #0056b3; /* Заменен tomato на #0056b3 */
+            color: white;
+        }
+
+    .dish-card .dish-price {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .dish-card .dish-name {
+        font-size: 1.1em;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .dish-card .dish-weight {
+        color: grey;
+        margin-bottom: 15px;
+    }
+
+    .dish-card .add-to-cart-btn {
+        background-color: #f1eee9;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        margin-top: auto;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        color: #333;
+    }
+
+#order-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+.order-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.order-summary, .order-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+#order-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #f1eee9;
+    padding-bottom: 10px;
+}
+
+#order-items-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+    #order-items-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    #order-items-list .item-name {
+        flex-grow: 1;
+        padding-right: 15px;
+        color: #555;
+    }
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    margin-top: 15px;
+    color: #333;
+}
+
+.order-form .form-group {
+    margin-bottom: 15px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-form input, .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+}
+
+#vd3 {
+    max-width: 100%;
+}
+
+/* Адаптивность для страницы "Собрать ланч" */
+
+/* Планшеты (≤800px) */
+@media (max-width: 800px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Мобильные устройства (≤600px) */
+@media (max-width: 600px) {
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dish-card {
+        padding: 20px;
+    }
+
+    .order-container {
+        flex-direction: column;
+    }
+}
