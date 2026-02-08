@@ -1,91 +1,166 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <title>Food Construct</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/print.css" media="print"> 
 </head>
-
 <body>
-    <!-- Шапка -->
-    <header>
-        <h1>Food Construct</h1>
-        <nav>
-            <a href="#">О нас</a>
-            <a href="#">Меню</a>
-            <a href="#">Заказ</a>
-            <a href="#contacts">Контакты</a> <!-- Ссылка на футер, где есть контакты-->
-        </nav>
-    </header>
 
-    <!-- Основное -->
-    <main>
-        <!-- О компании -->
-        <section>
-            <img src="photo/lunch.jpg" alt="Логотип компании">
+    <div class="container">
 
-            <h2>О нашей компании</h2>
-            <p>
-                Доставка еды от нашей компании — это идеальное решение для тех,
-                кто ценит вкусную пищу и удобное обслуживание.
-            </p>
-        </section>
 
-        <!-- Преимущества  -->
-        <section>
-            <h2>Наши преимущества</h2>
-            <ul>
-                <li>Широкий ассортимент блюд на любой вкус: 
-                от традиционных супов и салатов до экзотических деликатесов</li>
-                <li>Быструю доставку прямо к вашему дому или офису в течение часа</li>
-                <li>Высокое качество продуктов и свежесть приготовления каждого заказа</li>
-                <li>Удобный онлайн-заказ через наше мобильное приложение или сайт</li>
-                <li>Приятные скидки и акции для постоянных клиентов</li>
-            </ul>
-        </section>
+        <main>
 
-        <!-- Таблица -->
-        <section>
-            <h2>Популярные блюда</h2>
-            <table >
-                <tr>
-                    <th>№</th>
-                    <th>Наименование блюда</th>
-                    <th>Цена</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Лазания</td>
-                    <td>385 руб.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Том Ям</td>
-                    <td>365 руб.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Норвежский суп</td>
-                    <td>270 руб.</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Жареная картошка</td>
-                    <td>150 руб.</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Котлеты с пюре</td>
-                    <td>225 руб.</td>
-                </tr>
-            </table>
-        </section>
-    </main>
+            <section class="menu-section">
+                <h2>Супы</h2>
+                <div class="dishes-grid">
 
-    <!-- Футер с контактными данными -->
-    <footer id="contacts">
-        Адрес: Москва | Телефон: +1 (234) 567-89-10 | Email: Food@Construct.com
-    </footer>
+                    <div class="dish-card" data-name="Борщ с говядиной" data-price="200">
+
+                        <p class="dish-price">200₽</p>
+                        <p class="dish-name">Борщ</p>
+                        <img src="photo/borsh.jpg" alt="Борщ">
+                        <p class="dish-weight">300 мл</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+
+                    <div class="dish-card" data-name="Солянка мясная" data-price="250">
+
+                        <p class="dish-price">250₽</p>
+                        <p class="dish-name">Окрошка</p>
+                        <img src="photo/okroshka.jpg" alt="Окрошка">
+                        <p class="dish-weight">300 мл</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+
+                    <div class="dish-card" data-name="Куриный суп" data-price="150">
+
+                        <p class="dish-price">150₽</p>
+                        <p class="dish-name">Куриный суп с лапшой</p>
+                        <img src="photo/syp.jpeg" alt="Куриный суп с лапшой">
+                        <p class="dish-weight">300 мл</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="menu-section">
+                <h2>Главные блюда</h2>
+                <div class="dishes-grid">
+
+                    <div class="dish-card" data-name="Котлета по-киевски" data-price="350">
+
+                        <p class="dish-price">350₽</p>
+                        <p class="dish-name">Котлета по-киевски с картофельным пюре</p>
+                        <img src="photo/kotleta.jpeg" alt="Котлета по-киевски с картофельным пюре">
+                        <p class="dish-weight">250 г</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+
+                    <div class="dish-card" data-name="Паста Карбонара" data-price="380">
+
+                        <p class="dish-price">380₽</p>
+                        <p class="dish-name">Паста карбонара с беконом</p>
+                        <img src="photo/pasta.jpg" alt="Паста карбонара с беконом">
+                        <p class="dish-weight">280 г</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+
+                    <div class="dish-card" data-name="Стейк из лосося" data-price="550">
+
+                        <p class="dish-price">550₽</p>
+                        <p class="dish-name">Стейк из лосося с рисом</p>
+                        <img src="photo/steik.jpg" alt="Стейк из лосося с рисом">
+                        <p class="dish-weight">220 г</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="menu-section">
+                <h2>Напитки</h2>
+                <div class="dishes-grid">
+
+                    <div class="dish-card" data-name="Морс клюквенный" data-price="100">
+
+                        <p class="dish-price">100₽</p>
+                        <p class="dish-name">Ягодный морс</p>
+                        <img src="photo/mors.jpg" alt="Ягодный морс">
+                        <p class="dish-weight">500 мл</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+
+                    <div class="dish-card" data-name="Лимонад домашний" data-price="120">
+
+                        <p class="dish-price">120₽</p>
+                        <p class="dish-name">Домашний лимонад "Мохито"</p>
+                        <img src="photo/mohito.jpg" alt="Мохито">
+                        <p class="dish-weight">500 мл</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+
+                    <div class="dish-card" data-name="Вода негазированная" data-price="80">
+
+                        <p class="dish-price">80₽</p>
+                        <p class="dish-name">Простая вода</p>
+                        <img src="photo/voda.png" alt="Простая вода">
+                        <p class="dish-weight">500 мл</p>
+                        <button class="add-to-cart-btn">Добавить</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="order-section">
+                <h2>Сделать заказ</h2>
+
+                <div class="order-container">
+                    <div class="order-summary">
+                        <h3>Ваш заказ</h3>
+                        <ul id="order-items-list">
+                        </ul>
+                        <div class="order-total">
+                            <strong>Итого:</strong>
+                            <strong id="total-price">0₽</strong>
+                        </div>
+                    </div>
+                    <div class="order-form">
+                        <h3>Ваши данные</h3>
+                        <form id="checkout-form" method="post" action="https://httpbin.org/post">
+                            <div class="form-group">
+                                <label for="customer-name">ФИО:</label>
+                                <input type="text" name="name" id="customer-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-phone">Номер телефона:</label>
+                                <input type="tel" id="customer-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-address">Адрес доставки:</label>
+                                <input type="text" id="customer-address" name="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-comments">Комментарии к заказу:</label>
+                                <textarea id="vd3" rows="3" name="text"></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Заказать</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contacts">
+            Адрес: Москва | Телефон: +1 (234) 567-89-10 | Email: Food@Construct.com
+        </footer>
+
+    </div>
+
 </body>
 </html>
+
