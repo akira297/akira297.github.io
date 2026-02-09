@@ -1,91 +1,74 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <title>Food Construct</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан - Меню</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/print.css" media="print">
 </head>
-
 <body>
-    <!-- Шапка -->
-    <header>
-        <h1>Food Construct</h1>
-        <nav>
-            <a href="#">О нас</a>
-            <a href="#">Меню</a>
-            <a href="#">Заказ</a>
-            <a href="#contacts">Контакты</a> <!-- Ссылка на футер, где есть контакты-->
-        </nav>
-    </header>
+    <div class="container">
+        <main>
 
-    <!-- Основное -->
-    <main>
-        <!-- О компании -->
-        <section>
-            <img src="photo/lunch.jpg" alt="Логотип компании">
+            <h1>Выберите блюда</h1>
 
-            <h2>О нашей компании</h2>
-            <p>
-                Доставка еды от нашей компании — это идеальное решение для тех,
-                кто ценит вкусную пищу и удобное обслуживание.
-            </p>
-        </section>
+            <div id="filters">
+                <label>Фильтр по типу:</label>
+                <select id="filter-select">
+                    <option value="all">Все</option>
+                    <option value="soup">Супы</option>
+                    <option value="main">Главное блюдо</option>
+                    <option value="drink">Напиток</option>
+                </select>
+            </div>
 
-        <!-- Преимущества  -->
-        <section>
-            <h2>Наши преимущества</h2>
-            <ul>
-                <li>Широкий ассортимент блюд на любой вкус: 
-                от традиционных супов и салатов до экзотических деликатесов</li>
-                <li>Быструю доставку прямо к вашему дому или офису в течение часа</li>
-                <li>Высокое качество продуктов и свежесть приготовления каждого заказа</li>
-                <li>Удобный онлайн-заказ через наше мобильное приложение или сайт</li>
-                <li>Приятные скидки и акции для постоянных клиентов</li>
-            </ul>
-        </section>
+            <!-- Только секция заказа остается статической, остальное создаст JS -->
+            <section id="order-section">
+                <h2>Сделать заказ</h2>
+                <div class="order-container">
+                    <div class="order-summary">
+                        <h3>Ваш заказ</h3>
+                        <ul id="order-items-list">
+                        </ul>
+                        <div class="order-total">
+                            <strong>Итого:</strong>
+                            <strong id="total-price">0₽</strong>
+                        </div>
+                    </div>
+                    <div class="order-form">
+                        <h3>Ваши данные</h3>
+                        <form id="checkout-form" method="post">
+                            <div class="form-group">
+                                <label for="customer-name">ФИО:</label>
+                                <input type="text" name="name" id="customer-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-phone">Номер телефона:</label>
+                                <input type="tel" id="customer-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-address">Адрес доставки:</label>
+                                <input type="text" id="customer-address" name="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-comments">Комментарии к заказу:</label>
+                                <textarea id="vd3" rows="3" name="text"></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Заказать</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <!-- Таблица -->
-        <section>
-            <h2>Популярные блюда</h2>
-            <table >
-                <tr>
-                    <th>№</th>
-                    <th>Наименование блюда</th>
-                    <th>Цена</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Лазания</td>
-                    <td>385 руб.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Том Ям</td>
-                    <td>365 руб.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Норвежский суп</td>
-                    <td>270 руб.</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Жареная картошка</td>
-                    <td>150 руб.</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Котлеты с пюре</td>
-                    <td>225 руб.</td>
-                </tr>
-            </table>
-        </section>
-    </main>
+        <footer id="contacts">
+            Адрес: Москва | Телефон: +1 (234) 567-89-10 | Email: Food@Construct.com
+        </footer>
+    </div>
 
-    <!-- Футер с контактными данными -->
-    <footer id="contacts">
-        Адрес: Москва | Телефон: +1 (234) 567-89-10 | Email: Food@Construct.com
-    </footer>
+    <!-- Подключаем скрипты -->
+    <script src="./script/list_dishes.js" charset="UTF-8"></script>
+    <script src="./script/displayDishes.js" charset="UTF-8"></script>
 </body>
 </html>
