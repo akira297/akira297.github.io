@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         addButton.className = 'add-to-cart-btn'; // Используем существующий класс
         addButton.textContent = 'Добавить в заказ';
         addButton.dataset.id = dish.keyword;
+        addButton.dataset.category = dish.category; // Сохраняем категорию в кнопке
 
         // Изображение
         const imageContainer = document.createElement('div');
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
 
         // Добавляем кнопку "Все" для этой категории
-        const allButton = createSubfilterButton('all', 'Все');
+        const allButton = createSubfilterButton('all', '\u0412\u0441\u0435');
         allButton.classList.add('active');
         buttonsContainer.appendChild(allButton);
 
@@ -295,39 +296,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getCategoryTitle(category) {
         const titles = {
-            'soup': 'Фильтровать супы по типу:',
-            'main': 'Фильтровать основные блюда по типу:',
-            'salad': 'Фильтровать салаты по типу:',
-            'dessert': 'Фильтровать десерты по типу:',
-            'drink': 'Фильтровать напитки по типу:'
+            'soup': '\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0442\u044C \u0441\u0443\u043F\u044B \u043F\u043E \u0442\u0438\u043F\u0443:',
+            'main': '\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0442\u044C \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0435 \u0431\u043B\u044E\u0434\u0430 \u043F\u043E \u0442\u0438\u043F\u0443:',
+            'salad': '\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0442\u044C \u0441\u0430\u043B\u0430\u0442\u044B \u043F\u043E \u0442\u0438\u043F\u0443:',
+            'dessert': '\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0442\u044C \u0434\u0435\u0441\u0435\u0440\u0442\u044B \u043F\u043E \u0442\u0438\u043F\u0443:',
+            'drink': '\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0442\u044C \u043D\u0430\u043F\u0438\u0442\u043A\u0438 \u043F\u043E \u0442\u0438\u043F\u0443:'
         };
-        return titles[category] || 'Фильтровать по типу:';
+        return titles[category] || '\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0442\u044C \u043F\u043E \u0442\u0438\u043F\u0443:';
     }
 
     function getSubfiltersForCategory(category) {
         const subfilters = {
             'soup': [
-                { value: 'meat', label: 'Мясные' },
-                { value: 'fish', label: 'Рыбные' }
+                { value: 'meat', label: '\u041C\u044F\u0441\u043D\u044B\u0435' },
+                { value: 'fish', label: '\u0420\u044B\u0431\u043D\u044B\u0435' }
             ],
             'main': [
-                { value: 'fastfood', label: 'Фаст фуд' },
-                { value: 'pasta', label: 'Паста' },
-                { value: 'meat', label: 'Мясные' },
-                { value: 'fish', label: 'Рыба' }
+                { value: 'fastfood', label: '\u0424\u0430\u0441\u0442 \u0444\u0443\u0434' },
+                { value: 'pasta', label: '\u041F\u0430\u0441\u0442\u0430' },
+                { value: 'meat', label: '\u041C\u044F\u0441\u043D\u044B\u0435' },
+                { value: 'fish', label: '\u0420\u044B\u0431\u0430' }
             ],
             'salad': [
-                { value: 'hot', label: 'Горячие' },
-                { value: 'cold', label: 'Холодные' }
+                { value: 'hot', label: '\u0413\u043E\u0440\u044F\u0447\u0438\u0435' },
+                { value: 'cold', label: '\u0425\u043E\u043B\u043E\u0434\u043D\u044B\u0435' }
             ],
             'dessert': [
-                { value: 'chocolate', label: 'Шоколадные' },
-                { value: 'berries', label: 'Ягодные' },
-                { value: 'cream', label: 'С кремом' }
+                { value: 'chocolate', label: '\u0428\u043E\u043A\u043E\u043B\u0430\u0434\u043D\u044B\u0435' },
+                { value: 'berries', label: '\u042F\u0433\u043E\u0434\u043D\u044B\u0435' },
+                { value: 'cream', label: '\u0421 \u043A\u0440\u0435\u043C\u043E\u043C' }
             ],
             'drink': [
-                { value: 'hot', label: 'Горячие' },
-                { value: 'cold', label: 'Холодные' }
+                { value: 'hot', label: '\u0413\u043E\u0440\u044F\u0447\u0438\u0435' },
+                { value: 'cold', label: '\u0425\u043E\u043B\u043E\u0434\u043D\u044B\u0435' }
             ]
         };
         return subfilters[category] || [];
@@ -350,16 +351,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function addToOrder(dish, button) {
-        console.log(`Добавлено в заказ: ${dish.name} за ${dish.price}₽`);
+        console.log(`Добавлено в заказ: ${dish.name} (категория: ${dish.category}) за ${dish.price}₽`);
 
         // Визуальная обратная связь
         const originalText = button.textContent;
-        button.textContent = 'Добавлено';
+        button.textContent = '\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E';
         button.style.backgroundColor = '#0056b3';
         button.style.color = 'white';
         button.disabled = true;
 
-        // Добавляем товар в список заказа
+        // Добавляем товар в список заказа с категорией
         updateOrderList(dish);
 
         setTimeout(() => {
@@ -379,8 +380,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Создаем элемент списка
+        // Создаем элемент списка с data-атрибутом категории
         const listItem = document.createElement('li');
+        listItem.dataset.category = dish.category; // Сохраняем категорию
 
         const itemName = document.createElement('span');
         itemName.className = 'item-name';
